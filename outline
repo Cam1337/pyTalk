@@ -1,0 +1,9 @@
+loop:
+    thread1: record until silence
+    thread2: convert recording to queriable format
+    thread3: query database with recording
+    reaction = thread4: parse result and determine if reaction
+    if !reaction:
+        restart loop w/ beginning padding equal to recording value
+    else:
+        thread5: react
